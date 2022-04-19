@@ -1,19 +1,45 @@
-<script>
-import Navbar from "../src/components/Navbar.vue";
-import Footer from "../src/components/Footer.vue";
-
-export default {
-  components: { Navbar, Footer },
-};
-</script>
-
 <template>
   <header>
-    <Navbar />
+    <Navbar :logo="logo_src" :alt="app_name" />
   </header>
 
   <RouterView />
   <Footer />
 </template>
 
-<style></style>
+<script>
+import Navbar from "../src/components/Navbar.vue";
+import Footer from "../src/components/Footer.vue";
+
+export default {
+  components: { Navbar, Footer },
+  data() {
+    return {
+      logo_src: "/img/logo.png",
+      app_name: "Make Your Burguer",
+    };
+  },
+};
+</script>
+
+<style>
+/* ----------------- */
+/* ---- GENERAL ---- */
+/* ----------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+}
+</style>

@@ -1,7 +1,28 @@
+<template>
+  <footer class="footer">
+    <p class="footer-label">Make Your Burguer &copy 2022</p>
+  </footer>
+</template>
+
 <script>
 export default { name: "Footer" };
 </script>
 
-<template><h1>Eu sou um rodapé</h1></template>
+<style>
+/* -------------- */
+/* --- FOOTER --- */
+/* -------------- */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  height: 9.6rem;
+  border-top: 4px solid #111;
+}
 
-<style></style>
+.footer-label {
+  font-size: 1.4rem;
+  color: #fcba03;
+}
+</style>
