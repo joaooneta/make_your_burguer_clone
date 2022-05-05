@@ -12,10 +12,13 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 /* -------------------- */
 /* --- HERO SECTION --- */
 /* -------------------- */
+.hero-section {
+  margin-bottom: 8.6rem;
+}
 .hero-container {
   background-image: url("../../public/img/burger.jpg");
   background-position: 0 -25rem;

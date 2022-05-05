@@ -42,4 +42,13 @@ body {
   line-height: 1;
   font-weight: 400;
 }
+
+/* ---------------- */
+/* --- REUSABLE --- */
+/* ---------------- */
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 4.8rem;
+}
 </style>
