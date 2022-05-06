@@ -2,7 +2,7 @@
   <section class="montar-section">
     <div class="container">
       <h2 class="heading-secondary">Monte o seu burger:</h2>
-      <form class="burguer-form" action="#">
+      <form class="burguer-form" @submit="createBurguer">
         <div>
           <label for="nome">Nome do cliente:</label>
           <input
@@ -10,6 +10,7 @@
             name="nome"
             id="nome"
             placeholder="Digite o seu nome"
+            v-model="clientName"
           />
         </div>
 
@@ -49,7 +50,8 @@
               <input
                 type="checkbox"
                 name="checkbox-optionals"
-                v-model="optinals"
+                id="checkbox-optionals"
+                v-model="optionals"
                 :value="optional.tipo"
               />
               <span class="option-span">{{ optional.tipo }}</span>
@@ -77,7 +79,6 @@ export default {
       bread: null,
       meat: null,
       optionals: [],
-      status: "Solicitado",
       msg: null,
     };
   },
@@ -89,6 +90,30 @@ export default {
       this.breads = data.paes;
       this.meats = data.carnes;
       this.optionalsData = data.opcionais;
+    },
+    async createBurguer(event) {
+      event.preventDefault();
+
+      const data = {
+        clientName: this.clientName,
+        bread: this.bread,
+        meat: this.meat,
+        optionals: Array.from(this.optionals),
+        status: "Solicitado",
+      };
+
+      const dataJSON = JSON.stringify(data);
+      const req = await fetch(" http://localhost:3000/burgers", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: dataJSON,
+      });
+      const res = await req.json();
+
+      this.clientName = "";
+      this.bread = "";
+      this.meat = "";
+      this.optionals = "";
     },
   },
   mounted() {

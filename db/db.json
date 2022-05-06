@@ -77,5 +77,40 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": []
+  "burgers": [
+    {
+      "clientName": "nome",
+      "bread": "Italiano Branco",
+      "meat": "Alcatra",
+      "optionals": [
+        "Bacon",
+        "Salame"
+      ],
+      "status": "Solicitado",
+      "id": 1
+    },
+    {
+      "clientName": "nome2",
+      "bread": "Integral",
+      "meat": "Maminha",
+      "optionals": [
+        "Bacon",
+        "Tomate",
+        "Pepino"
+      ],
+      "status": "Solicitado",
+      "id": 2
+    },
+    {
+      "clientName": "nome",
+      "bread": "Parmesão e Orégano",
+      "meat": "Maminha",
+      "optionals": [
+        "Cheddar",
+        "Tomate"
+      ],
+      "status": "Solicitado",
+      "id": 3
+    }
+  ]
 }
