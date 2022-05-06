@@ -14,88 +14,45 @@
         </div>
 
         <div>
-          <label for="select-bread">Escolha o pao:</label>
-          <select name="select-bread" id="select-bread" required>
+          <label for="select-bread">Escolha o pão:</label>
+          <select
+            name="select-bread"
+            id="select-bread"
+            v-model="bread"
+            required
+          >
             <option value="">Escolha uma opção:</option>
-            <option value="1">Italiano Branco</option>
-            <option value="2">3 Queijos</option>
-            <option value="3">Parmesao e Orégano</option>
-            <option value="4">Integral</option>
+            <option v-for="bread in breads" :key="bread.id" :value="bread.tipo">
+              {{ bread.tipo }}
+            </option>
           </select>
         </div>
 
         <div>
           <label for="select-meat">Escolha a carne do seu Burger:</label>
-          <select name="select-meat" id="select-meat" required>
+          <select name="select-meat" id="select-meat" v-model="meat" required>
             <option value="">Escolha uma opção:</option>
-            <option value="1">Maminha</option>
-            <option value="2">Alcatra</option>
-            <option value="3">Picanha</option>
-            <option value="4">Veggie burger</option>
+            <option v-for="meat in meats" :key="meat.id" :value="meat.tipo">
+              {{ meat.tipo }}
+            </option>
           </select>
         </div>
 
         <div>
           <label for="checkbox-optionals">Escolha os opcionais:</label>
           <div class="optionals-container">
-            <div class="option-box">
+            <div
+              class="option-box"
+              v-for="optional in optionalsData"
+              :key="optional.id"
+            >
               <input
                 type="checkbox"
                 name="checkbox-optionals"
-                id="checkbox-optionals"
-                value="bacon"
+                v-model="optinals"
+                :value="optional.tipo"
               />
-              <span class="option-span">Bacon</span>
-            </div>
-
-            <div class="option-box">
-              <input
-                type="checkbox"
-                name="checkbox-optionals"
-                id="checkbox-optionals"
-                value="cheddar"
-              />
-              <span class="option-span">Cheddar</span>
-            </div>
-
-            <div class="option-box">
-              <input
-                type="checkbox"
-                name="checkbox-optionals"
-                id="checkbox-optionals"
-                value="salame"
-              />
-              <span class="option-span">Salame</span>
-            </div>
-
-            <div class="option-box">
-              <input
-                type="checkbox"
-                name="checkbox-optionals"
-                id="checkbox-optionals"
-                value="tomate"
-              />
-              <span class="option-span">Tomate</span>
-            </div>
-
-            <div class="option-box">
-              <input
-                type="checkbox"
-                name="checkbox-optionals"
-                id="checkbox-optionals"
-                value="cebola-roxa"
-              />
-              <span class="option-span">Cebola roxa</span>
-            </div>
-
-            <div class="option-box">
-              <input
-                type="checkbox"
-                name="checkbox-optionals"
-                id="checkbox-optionals"
-                value="pepino"
-              />
-              <span class="option-span">Pepino</span>
+              <span class="option-span">{{ optional.tipo }}</span>
             </div>
           </div>
         </div>
@@ -108,7 +65,37 @@
   </section>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: "MontarBurguerForm",
+  data() {
+    return {
+      breads: null,
+      meats: null,
+      optionalsData: null,
+      clientName: null,
+      bread: null,
+      meat: null,
+      optionals: [],
+      status: "Solicitado",
+      msg: null,
+    };
+  },
+  methods: {
+    async getIngredients() {
+      const req = await fetch("http://localhost:3000/ingredientes");
+      const data = await req.json();
+
+      this.breads = data.paes;
+      this.meats = data.carnes;
+      this.optionalsData = data.opcionais;
+    },
+  },
+  mounted() {
+    this.getIngredients();
+  },
+};
+</script>
 
 <style scoped>
 /* ------------------------------ */
