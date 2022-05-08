@@ -2,6 +2,7 @@
   <section class="montar-section">
     <div class="container">
       <h2 class="heading-secondary">Monte o seu burger:</h2>
+      <Message :message="message" v-show="message" />
       <form class="burguer-form" @submit="createBurguer">
         <div>
           <label for="nome">Nome do cliente:</label>
@@ -68,8 +69,11 @@
 </template>
 
 <script>
+import Message from "./Message.vue";
+
 export default {
   name: "MontarBurguerForm",
+  components: { Message },
   data() {
     return {
       breads: null,
@@ -79,7 +83,7 @@ export default {
       bread: null,
       meat: null,
       optionals: [],
-      msg: null,
+      message: null,
     };
   },
   methods: {
@@ -108,7 +112,11 @@ export default {
         headers: { "Content-Type": "application/json" },
         body: dataJSON,
       });
+
       const res = await req.json();
+
+      this.message = `Pedido Nº ${res.id} realizado com sucesso!`;
+      setTimeout(() => (this.message = ""), 3000);
 
       this.clientName = "";
       this.bread = "";
