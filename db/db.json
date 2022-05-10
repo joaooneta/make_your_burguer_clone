@@ -82,22 +82,15 @@
       "clientName": "nome",
       "bread": "Italiano Branco",
       "meat": "Alcatra",
-      "optionals": [
-        "Bacon",
-        "Salame"
-      ],
-      "status": "Solicitado",
+      "optionals": ["Bacon", "Salame"],
+      "status": "Em produção",
       "id": 1
     },
     {
       "clientName": "nome2",
       "bread": "Integral",
       "meat": "Maminha",
-      "optionals": [
-        "Bacon",
-        "Tomate",
-        "Pepino"
-      ],
+      "optionals": ["Bacon", "Tomate", "Pepino"],
       "status": "Solicitado",
       "id": 2
     },
@@ -105,10 +98,7 @@
       "clientName": "nome",
       "bread": "Parmesão e Orégano",
       "meat": "Maminha",
-      "optionals": [
-        "Cheddar",
-        "Tomate"
-      ],
+      "optionals": ["Cheddar", "Tomate"],
       "status": "Solicitado",
       "id": 3
     },
@@ -116,11 +106,7 @@
       "clientName": "Nome1",
       "bread": "Italiano Branco",
       "meat": "Picanha",
-      "optionals": [
-        "Bacon",
-        "Salame",
-        "Tomate"
-      ],
+      "optionals": ["Bacon", "Salame", "Tomate"],
       "status": "Solicitado",
       "id": 4
     },
@@ -136,10 +122,7 @@
       "clientName": "nome",
       "bread": "3 Queijos",
       "meat": "Maminha",
-      "optionals": [
-        "Bacon",
-        "Cheddar"
-      ],
+      "optionals": ["Bacon", "Cheddar"],
       "status": "Solicitado",
       "id": 6
     },
@@ -147,10 +130,7 @@
       "clientName": "Nome1",
       "bread": "Italiano Branco",
       "meat": "Picanha",
-      "optionals": [
-        "Cheddar",
-        "Salame"
-      ],
+      "optionals": ["Cheddar", "Salame"],
       "status": "Solicitado",
       "id": 7
     },
@@ -158,10 +138,7 @@
       "clientName": "nome",
       "bread": "Italiano Branco",
       "meat": "Maminha",
-      "optionals": [
-        "Salame",
-        "Cebola roxa"
-      ],
+      "optionals": ["Salame", "Cebola roxa"],
       "status": "Solicitado",
       "id": 8
     },
@@ -169,10 +146,7 @@
       "clientName": "Nome",
       "bread": "3 Queijos",
       "meat": "Maminha",
-      "optionals": [
-        "Salame",
-        "Cebola roxa"
-      ],
+      "optionals": ["Salame", "Cebola roxa"],
       "status": "Solicitado",
       "id": 9
     },
@@ -180,11 +154,7 @@
       "clientName": "Paulo Matias",
       "bread": "Parmesão e Orégano",
       "meat": "Veggie burger",
-      "optionals": [
-        "Bacon",
-        "Tomate",
-        "Cebola roxa"
-      ],
+      "optionals": ["Bacon", "Tomate", "Cebola roxa"],
       "status": "Solicitado",
       "id": 10
     }
