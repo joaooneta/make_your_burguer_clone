@@ -86,7 +86,7 @@
         "Bacon",
         "Salame"
       ],
-      "status": "Em produção",
+      "status": "Finalizado",
       "id": 1
     },
     {
@@ -98,20 +98,8 @@
         "Tomate",
         "Pepino"
       ],
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 2
-    },
-    {
-      "clientName": "Nome1",
-      "bread": "Italiano Branco",
-      "meat": "Picanha",
-      "optionals": [
-        "Bacon",
-        "Salame",
-        "Tomate"
-      ],
-      "status": "Solicitado",
-      "id": 4
     },
     {
       "clientName": "ome",
@@ -123,24 +111,13 @@
     },
     {
       "clientName": "nome",
-      "bread": "3 Queijos",
-      "meat": "Maminha",
-      "optionals": [
-        "Bacon",
-        "Cheddar"
-      ],
-      "status": "Solicitado",
-      "id": 6
-    },
-    {
-      "clientName": "nome",
       "bread": "Italiano Branco",
       "meat": "Maminha",
       "optionals": [
         "Salame",
         "Cebola roxa"
       ],
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 8
     },
     {
@@ -151,7 +128,7 @@
         "Salame",
         "Cebola roxa"
       ],
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 9
     },
     {
@@ -163,7 +140,7 @@
         "Tomate",
         "Cebola roxa"
       ],
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 10
     }
   ]
