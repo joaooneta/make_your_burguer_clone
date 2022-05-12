@@ -86,28 +86,8 @@
         "Bacon",
         "Salame"
       ],
-      "status": "Finalizado",
-      "id": 1
-    },
-    {
-      "clientName": "nome2",
-      "bread": "Integral",
-      "meat": "Maminha",
-      "optionals": [
-        "Bacon",
-        "Tomate",
-        "Pepino"
-      ],
-      "status": "Em produção",
-      "id": 2
-    },
-    {
-      "clientName": "ome",
-      "bread": "Parmesão e Orégano",
-      "meat": "Picanha",
-      "optionals": [],
       "status": "Solicitado",
-      "id": 5
+      "id": 1
     },
     {
       "clientName": "nome",
@@ -121,17 +101,6 @@
       "id": 8
     },
     {
-      "clientName": "Nome",
-      "bread": "3 Queijos",
-      "meat": "Maminha",
-      "optionals": [
-        "Salame",
-        "Cebola roxa"
-      ],
-      "status": "Em produção",
-      "id": 9
-    },
-    {
       "clientName": "Paulo Matias",
       "bread": "Parmesão e Orégano",
       "meat": "Veggie burger",
@@ -140,8 +109,38 @@
         "Tomate",
         "Cebola roxa"
       ],
-      "status": "Em produção",
+      "status": "Solicitado",
       "id": 10
+    },
+    {
+      "clientName": "Nome1",
+      "bread": "3 Queijos",
+      "meat": "Alcatra",
+      "optionals": [
+        "Salame",
+        "Cebola roxa"
+      ],
+      "status": "Solicitado",
+      "id": 11
+    },
+    {
+      "clientName": "nome",
+      "bread": "Parmesão e Orégano",
+      "meat": "Alcatra",
+      "optionals": [
+        "Bacon",
+        "Salame"
+      ],
+      "status": "Solicitado",
+      "id": 12
+    },
+    {
+      "clientName": "nome",
+      "bread": "3 Queijos",
+      "meat": "Alcatra",
+      "optionals": [],
+      "status": "Solicitado",
+      "id": 13
     }
   ]
 }

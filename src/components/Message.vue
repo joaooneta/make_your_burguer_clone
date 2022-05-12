@@ -20,7 +20,7 @@ export default {
   border-radius: 5px;
   padding: 1rem;
   max-width: 40rem;
-  margin-bottom: 3.6rem;
+  margin: 1.8rem auto;
 }
 
 .message {
