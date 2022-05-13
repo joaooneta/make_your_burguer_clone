@@ -1,18 +1,17 @@
 <template>
-  <header>
-    <Navbar :logo="logo_src" :alt="app_name" />
-  </header>
+  <TheHeader :logo="logo_src" :alt="app_name" />
 
   <RouterView />
-  <Footer />
+
+  <TheFooter />
 </template>
 
 <script>
-import Navbar from "../src/components/Navbar.vue";
-import Footer from "../src/components/Footer.vue";
+import TheHeader from "../src/components/TheHeader.vue";
+import TheFooter from "../src/components/TheFooter.vue";
 
 export default {
-  components: { Navbar, Footer },
+  components: { TheHeader, TheFooter },
   data() {
     return {
       logo_src: "/img/logo.png",

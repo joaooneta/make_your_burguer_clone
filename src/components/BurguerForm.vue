@@ -1,71 +1,62 @@
 <template>
-  <section class="montar-section">
-    <div class="container">
-      <h2 class="heading-secondary">Monte o seu burger:</h2>
-      <Message :message="message" v-show="message" />
-      <form class="burguer-form" @submit="createBurguer">
-        <div>
-          <label for="nome">Nome do cliente:</label>
-          <input
-            type="text"
-            name="nome"
-            id="nome"
-            placeholder="Digite o seu nome"
-            v-model="clientName"
-          />
-        </div>
-
-        <div>
-          <label for="select-bread">Escolha o pão:</label>
-          <select
-            name="select-bread"
-            id="select-bread"
-            v-model="bread"
-            required
-          >
-            <option value="">Escolha uma opção:</option>
-            <option v-for="bread in breads" :key="bread.id" :value="bread.tipo">
-              {{ bread.tipo }}
-            </option>
-          </select>
-        </div>
-
-        <div>
-          <label for="select-meat">Escolha a carne do seu Burger:</label>
-          <select name="select-meat" id="select-meat" v-model="meat" required>
-            <option value="">Escolha uma opção:</option>
-            <option v-for="meat in meats" :key="meat.id" :value="meat.tipo">
-              {{ meat.tipo }}
-            </option>
-          </select>
-        </div>
-
-        <div>
-          <label for="checkbox-optionals">Escolha os opcionais:</label>
-          <div class="optionals-container">
-            <div
-              class="option-box"
-              v-for="optional in optionalsData"
-              :key="optional.id"
-            >
-              <input
-                type="checkbox"
-                name="checkbox-optionals"
-                id="checkbox-optionals"
-                v-model="optionals"
-                :value="optional.tipo"
-              />
-              <span class="option-span">{{ optional.tipo }}</span>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <input type="submit" value="Criar meu burguer!" class="btn-form" />
-        </div>
-      </form>
+  <h2 class="heading-secondary">Monte o seu burger:</h2>
+  <Message :message="message" v-show="message" />
+  <form class="burguer-form" @submit="createBurguer">
+    <div>
+      <label for="nome">Nome do cliente:</label>
+      <input
+        type="text"
+        name="nome"
+        id="nome"
+        placeholder="Digite o seu nome"
+        v-model="clientName"
+      />
     </div>
-  </section>
+
+    <div>
+      <label for="select-bread">Escolha o pão:</label>
+      <select name="select-bread" id="select-bread" v-model="bread" required>
+        <option value="">Escolha uma opção:</option>
+        <option v-for="bread in breads" :key="bread.id" :value="bread.tipo">
+          {{ bread.tipo }}
+        </option>
+      </select>
+    </div>
+
+    <div>
+      <label for="select-meat">Escolha a carne do seu Burger:</label>
+      <select name="select-meat" id="select-meat" v-model="meat" required>
+        <option value="">Escolha uma opção:</option>
+        <option v-for="meat in meats" :key="meat.id" :value="meat.tipo">
+          {{ meat.tipo }}
+        </option>
+      </select>
+    </div>
+
+    <div>
+      <label for="checkbox-optionals">Escolha os opcionais:</label>
+      <div class="optionals-container">
+        <div
+          class="option-box"
+          v-for="optional in optionalsData"
+          :key="optional.id"
+        >
+          <input
+            type="checkbox"
+            name="checkbox-optionals"
+            id="checkbox-optionals"
+            v-model="optionals"
+            :value="optional.tipo"
+          />
+          <span class="option-span">{{ optional.tipo }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <input type="submit" value="Criar meu burguer!" class="btn-form" />
+    </div>
+  </form>
 </template>
 
 <script>
@@ -131,17 +122,6 @@ export default {
 </script>
 
 <style scoped>
-/* ------------------------------ */
-/* --- MONTAR BURGUER SECTION --- */
-/* ------------------------------ */
-.montar-section {
-  max-width: 120rem;
-  padding: 0 3.2rem;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-
 .burguer-form label {
   display: block;
   font-size: 1.6rem;

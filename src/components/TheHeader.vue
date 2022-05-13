@@ -18,7 +18,7 @@
 
 <script scoped>
 export default {
-  name: "Navbar",
+  name: "TheHeader",
   props: ["logo", "alt"],
 };
 </script>

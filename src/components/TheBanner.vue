@@ -1,24 +1,16 @@
 <template>
-  <section class="hero-section">
-    <div class="hero-container">
-      <h1 class="heading">Make Your Burguer</h1>
-    </div>
-  </section>
+  <div class="hero-container">
+    <h1 class="heading">Make Your Burguer</h1>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "Hero",
+  name: "TheBanner",
 };
 </script>
 
 <style scoped>
-/* -------------------- */
-/* --- HERO SECTION --- */
-/* -------------------- */
-.hero-section {
-  margin-bottom: 8.6rem;
-}
 .hero-container {
   background-image: url("../../public/img/burger.jpg");
   background-position: 0 -25rem;

@@ -81,17 +81,6 @@
     {
       "clientName": "nome",
       "bread": "Italiano Branco",
-      "meat": "Alcatra",
-      "optionals": [
-        "Bacon",
-        "Salame"
-      ],
-      "status": "Solicitado",
-      "id": 1
-    },
-    {
-      "clientName": "nome",
-      "bread": "Italiano Branco",
       "meat": "Maminha",
       "optionals": [
         "Salame",
@@ -99,18 +88,6 @@
       ],
       "status": "Em produção",
       "id": 8
-    },
-    {
-      "clientName": "Paulo Matias",
-      "bread": "Parmesão e Orégano",
-      "meat": "Veggie burger",
-      "optionals": [
-        "Bacon",
-        "Tomate",
-        "Cebola roxa"
-      ],
-      "status": "Solicitado",
-      "id": 10
     },
     {
       "clientName": "Nome1",
