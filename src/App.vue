@@ -55,7 +55,6 @@ body {
 .heading-secondary {
   font-size: 4.4rem;
   line-height: 1.2;
-  margin-bottom: 4.8rem;
   margin-top: 4.8rem;
 }
 </style>

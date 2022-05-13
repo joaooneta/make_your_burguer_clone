@@ -77,47 +77,5 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": [
-    {
-      "clientName": "nome",
-      "bread": "Italiano Branco",
-      "meat": "Maminha",
-      "optionals": [
-        "Salame",
-        "Cebola roxa"
-      ],
-      "status": "Em produção",
-      "id": 8
-    },
-    {
-      "clientName": "Nome1",
-      "bread": "3 Queijos",
-      "meat": "Alcatra",
-      "optionals": [
-        "Salame",
-        "Cebola roxa"
-      ],
-      "status": "Solicitado",
-      "id": 11
-    },
-    {
-      "clientName": "nome",
-      "bread": "Parmesão e Orégano",
-      "meat": "Alcatra",
-      "optionals": [
-        "Bacon",
-        "Salame"
-      ],
-      "status": "Solicitado",
-      "id": 12
-    },
-    {
-      "clientName": "nome",
-      "bread": "3 Queijos",
-      "meat": "Alcatra",
-      "optionals": [],
-      "status": "Solicitado",
-      "id": 13
-    }
-  ]
+  "burgers": []
 }

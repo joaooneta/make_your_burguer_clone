@@ -65,9 +65,6 @@ export default {
       const data = await req.json();
 
       this.burgers = data;
-      console.log("Data:");
-      console.log(data);
-      console.log(this.burgers);
 
       this.getStatus();
     },
@@ -76,15 +73,15 @@ export default {
       const data = await req.json();
 
       this.status = data;
-      console.log(this.status);
     },
     async deleteBurger(id) {
       const req = await fetch(`http://localhost:3000/burgers/${id}`, {
         method: "DELETE",
       });
+
       const res = await req.json();
 
-      this.message = `O pedido Nº ${res.id} foi removido com sucesso`;
+      this.message = `O pedido Nº ${id} foi removido com sucesso`;
       setTimeout(() => (this.message = ""), 3000);
 
       this.getPedidos();

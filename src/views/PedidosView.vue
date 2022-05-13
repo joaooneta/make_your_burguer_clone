@@ -17,11 +17,14 @@ export default {
 </script>
 
 <style scoped>
-.ordered-container {
+.section-ordered {
   max-width: 120rem;
+  min-height: 80vh;
+}
+.ordered-container {
   padding: 0 3.2rem;
   margin: 0 auto;
   display: grid;
-  justify-content: center;
+  align-items: center;
 }
 </style>
